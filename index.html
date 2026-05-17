@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptis General 8-Week Masterclass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="bi bi-mortarboard-fill"></i>
+                <h2>Aptis Master</h2>
+            </div>
+            
+            <div class="week-selector">
+                <p class="section-title">CHỌN TUẦN</p>
+                <div class="week-buttons" id="week-buttons">
+                    <!-- Rendered dynamically -->
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <p class="section-title">CHUYÊN MỤC</p>
+                <button class="nav-btn active" data-tab="roadmap">
+                    <i class="bi bi-map"></i> Lộ trình & Mục tiêu
+                </button>
+                <button class="nav-btn" data-tab="vocab">
+                    <i class="bi bi-book"></i> Thư viện Từ vựng
+                </button>
+                <button class="nav-btn" data-tab="drills">
+                    <i class="bi bi-lightning-charge"></i> Bài tập Trắc nghiệm (Drills)
+                </button>
+                <button class="nav-btn" data-tab="exercises">
+                    <i class="bi bi-headphones"></i> Bài tập Kỹ năng
+                </button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>Tiến độ: <span id="progress-text">Tuần 1</span></p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-info">
+                    <h1 id="page-title">Lộ trình & Mục tiêu</h1>
+                    <p id="page-subtitle">Xem tổng quan kế hoạch học tập của tuần.</p>
+                </div>
+            </header>
+
+            <div class="content-wrapper" id="content-container">
+                <!-- Content will be injected here by app.js -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Data and App Logic -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
