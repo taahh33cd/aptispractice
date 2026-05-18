@@ -991,6 +991,57 @@ const aptisData = {
               },
               "answer": "D",
               "explanation": "Giá vé được nhân viên đọc rõ ở câu cuối: 'That will be £45.50'. Các con số khác là giờ đi (9:15) và giờ đến (11:45)."
+            },
+            {
+              "id": 3,
+              "type": "multiple_choice",
+              "prompt": "Nghe thông báo và trả lời câu hỏi.",
+              "transcript": "[Speaker A]: Attention passengers on flight BA245 to Paris. Your gate has been changed from gate 12 to gate 22. Please make your way to gate 22 immediately. Thank you.\n[PAUSE]",
+              "tts_guide": "Voice: Female, airport announcer. Speed: 1.0x.",
+              "text_only_version": "Attention passengers on flight BA245 to Paris. Your gate has been changed from gate 12 to gate 22. Please make your way to gate 22 immediately. Thank you.",
+              "question": "Which gate should the passengers go to?",
+              "options": {
+                "A": "Gate 12",
+                "B": "Gate 22",
+                "C": "Gate 24",
+                "D": "Gate 45"
+              },
+              "answer": "B",
+              "explanation": "Thông báo chỉ rõ cổng bị đổi từ 12 sang 22: 'changed from gate 12 to gate 22'."
+            },
+            {
+              "id": 4,
+              "type": "multiple_choice",
+              "prompt": "Nghe tin nhắn và trả lời câu hỏi.",
+              "transcript": "[Speaker A]: Hi David, it's Emily. About our lunch appointment on Thursday the 15th, I'm really sorry but I have to reschedule it to Friday the 16th. Let me know if that works for you.\n[PAUSE]",
+              "tts_guide": "Voice: Female, casual. Speed: 1.0x.",
+              "text_only_version": "Hi David, it's Emily. About our lunch appointment on Thursday the 15th, I'm really sorry but I have to reschedule it to Friday the 16th. Let me know if that works for you.",
+              "question": "When is the new lunch appointment?",
+              "options": {
+                "A": "Tuesday the 13th",
+                "B": "Thursday the 15th",
+                "C": "Friday the 15th",
+                "D": "Friday the 16th"
+              },
+              "answer": "D",
+              "explanation": "Người nói xin lỗi và dời lịch sang thứ Sáu ngày 16: 'reschedule it to Friday the 16th'."
+            },
+            {
+              "id": 5,
+              "type": "multiple_choice",
+              "prompt": "Nghe đoạn hội thoại và chọn thông tin đúng.",
+              "transcript": "[Speaker A]: Hello, pizza delivery. I'm having trouble finding your house. Are you at 45 Elm Street?\n[Speaker B]: Oh no, you have the wrong address. It's 54 Elm Street, the house with the blue door.\n[PAUSE]",
+              "tts_guide": "Voice: Speaker A (Male, delivery driver), Speaker B (Female, customer). Speed: 1.0x.",
+              "text_only_version": "Speaker A: Hello, pizza delivery. I'm having trouble finding your house. Are you at 45 Elm Street?\nSpeaker B: Oh no, you have the wrong address. It's 54 Elm Street, the house with the blue door.",
+              "question": "What is the correct address?",
+              "options": {
+                "A": "45 Elm Street",
+                "B": "54 Elm Street",
+                "C": "45 Blue Street",
+                "D": "54 Blue Street"
+              },
+              "answer": "B",
+              "explanation": "Khách hàng đính chính lại địa chỉ đúng là 54 Elm Street: 'It's 54 Elm Street'."
             }
           ]
         },
@@ -1029,6 +1080,51 @@ const aptisData = {
               },
               "answer": "C",
               "explanation": "Scan từ khóa 'locker' hoặc ký hiệu tiền '$', ta thấy ngay ở rule số 4: 'Lockers are available for $2 per day'."
+            },
+            {
+              "id": 3,
+              "type": "multiple_choice",
+              "prompt": "Đọc lịch trình sau và tìm nhanh thông tin.",
+              "reading_text": "Conference Schedule:\n9:00 AM - Opening Speech\n10:30 AM - Coffee Break\n11:00 AM - Marketing Workshop\n1:00 PM - Lunch\n2:30 PM - Closing Ceremony",
+              "question": "What time is the coffee break?",
+              "options": {
+                "A": "9:00 AM",
+                "B": "10:30 AM",
+                "C": "11:00 AM",
+                "D": "1:00 PM"
+              },
+              "answer": "B",
+              "explanation": "Scan từ khóa 'Coffee Break', bạn sẽ thấy ngay giờ tương ứng là 10:30 AM."
+            },
+            {
+              "id": 4,
+              "type": "multiple_choice",
+              "prompt": "Đọc menu sau và tìm nhanh thông tin.",
+              "reading_text": "Lunch Menu:\nChicken Sandwich - $5.50\nBeef Burger - $7.00\nVegetable Soup - $4.00\nVegan Salad - $6.50",
+              "question": "How much is the Vegan Salad?",
+              "options": {
+                "A": "$4.00",
+                "B": "$5.50",
+                "C": "$6.50",
+                "D": "$7.00"
+              },
+              "answer": "C",
+              "explanation": "Scan từ khóa 'Vegan Salad' và nhìn sang giá tiền là $6.50."
+            },
+            {
+              "id": 5,
+              "type": "multiple_choice",
+              "prompt": "Đọc thông báo sau và tìm nhanh thông tin.",
+              "reading_text": "Job Opening: We are looking for a part-time graphic designer to join our team. Experience with Adobe Illustrator is required. Please send your portfolio to designjobs@creative.com by November 30th. For questions, call 555-0198.",
+              "question": "What is the email address to apply?",
+              "options": {
+                "A": "November 30th",
+                "B": "designjobs@creative.com",
+                "C": "555-0198",
+                "D": "part-time"
+              },
+              "answer": "B",
+              "explanation": "Scan từ khóa email (có chứa dấu @), bạn sẽ thấy địa chỉ 'designjobs@creative.com'."
             }
           ]
         },
@@ -1069,6 +1165,54 @@ const aptisData = {
                 "Rarely"
               ],
               "explanation": "Câu hỏi 'How often' đòi hỏi tần suất. Câu trả lời B1 và B2 cung cấp đúng thông tin trong giới hạn 1-5 từ. Không cần viết đủ câu S-V-O nếu context là chat."
+            },
+            {
+              "id": 3,
+              "type": "short_answer",
+              "prompt": "You are joining a food club. Answer the following message using 1 to 5 words.",
+              "message": "What is your favorite food?",
+              "model_answers": {
+                "B1": "I really like pizza.",
+                "B2": "Spicy food is my favorite."
+              },
+              "useful_phrases": [
+                "I really like...",
+                "My favorite is...",
+                "...is my favorite."
+              ],
+              "explanation": "Trả lời ngắn gọn đi thẳng vào loại thức ăn. Đảm bảo dưới 5 từ."
+            },
+            {
+              "id": 4,
+              "type": "short_answer",
+              "prompt": "You are joining a commuter club. Answer the following message using 1 to 5 words.",
+              "message": "How do you usually travel to work?",
+              "model_answers": {
+                "B1": "I take the bus.",
+                "B2": "Usually by public transport."
+              },
+              "useful_phrases": [
+                "I take...",
+                "By bus/train",
+                "I drive to..."
+              ],
+              "explanation": "Cung cấp phương tiện đi lại. Có thể trả lời câu hoàn chỉnh ngắn hoặc chỉ cần cụm từ chỉ phương tiện."
+            },
+            {
+              "id": 5,
+              "type": "short_answer",
+              "prompt": "You are joining an outdoor club. Answer the following message using 1 to 5 words.",
+              "message": "What kind of weather do you like most?",
+              "model_answers": {
+                "B1": "I love sunny days.",
+                "B2": "Cool and breezy weather."
+              },
+              "useful_phrases": [
+                "I love...",
+                "Sunny days",
+                "Cool weather"
+              ],
+              "explanation": "Trả lời về kiểu thời tiết yêu thích một cách trực tiếp, chú ý giới hạn từ."
             }
           ]
         },
@@ -1118,6 +1262,69 @@ const aptisData = {
                 "tend to"
               ],
               "explanation": "Cách dùng 'I'm a big fan of' và 'I tend to' giúp câu văn mềm mại và ở mức B2, thay vì dùng 'I like' liên tục như mức A2-B1."
+            },
+            {
+              "id": 3,
+              "type": "speaking_prompt",
+              "prompt": "Tell me about your hometown.",
+              "time_limit": "10 seconds preparation / 30 seconds speaking",
+              "model_answers": {
+                "B1": "My hometown is a small, quiet village. It is very beautiful and the people are friendly.",
+                "B2": "I'm originally from a bustling city. It's quite modern with plenty of entertainment options and a great atmosphere."
+              },
+              "useful_phrases": [
+                "I'm originally from...",
+                "My hometown is...",
+                "It's quite..."
+              ],
+              "highlighted_vocab": [
+                "bustling",
+                "entertainment options",
+                "atmosphere"
+              ],
+              "explanation": "Đề bài yêu cầu miêu tả quê hương. Mẫu B2 sử dụng được các tính từ miêu tả tốt như 'bustling', 'modern', 'entertainment options'."
+            },
+            {
+              "id": 4,
+              "type": "speaking_prompt",
+              "prompt": "What is your favorite season?",
+              "time_limit": "10 seconds preparation / 30 seconds speaking",
+              "model_answers": {
+                "B1": "My favorite season is summer because I can go to the beach and swim.",
+                "B2": "I absolutely love autumn. The weather is cool and pleasant, and the changing colors of the leaves are stunning."
+              },
+              "useful_phrases": [
+                "My favorite season is...",
+                "I absolutely love...",
+                "because..."
+              ],
+              "highlighted_vocab": [
+                "absolutely love",
+                "pleasant",
+                "stunning"
+              ],
+              "explanation": "Khi nói về mùa yêu thích, cần đưa ra lý do. B2 dùng các từ nhấn mạnh như 'absolutely love' và tính từ mạnh 'stunning'."
+            },
+            {
+              "id": 5,
+              "type": "speaking_prompt",
+              "prompt": "Do you prefer reading books or watching movies?",
+              "time_limit": "10 seconds preparation / 30 seconds speaking",
+              "model_answers": {
+                "B1": "I prefer watching movies because it's more relaxing. Books take a lot of time to read.",
+                "B2": "I'm more into watching movies. It's a great way to unwind after a long day and enjoy visual storytelling."
+              },
+              "useful_phrases": [
+                "I prefer...",
+                "I'm more into...",
+                "It's a great way to..."
+              ],
+              "highlighted_vocab": [
+                "more into",
+                "unwind",
+                "visual storytelling"
+              ],
+              "explanation": "Đưa ra sự lựa chọn và lý do. 'I'm more into' là cụm từ rất tự nhiên trong tiếng Anh giao tiếp (mức B2)."
             }
           ]
         },
@@ -1156,6 +1363,51 @@ const aptisData = {
               },
               "answer": "C",
               "explanation": "Vì cần bổ nghĩa cho động từ 'completed', ta phải chọn trạng từ 'quickly'. Các đáp án 'quick' là tính từ, 'quickness' là danh từ."
+            },
+            {
+              "id": 3,
+              "type": "multiple_choice",
+              "prompt": "Xác định từ loại cần điền vào chỗ trống, sau đó chọn đáp án đúng.",
+              "question_text": "The manager was impressed by the employee's ______.",
+              "step_1_pos": "Chỗ trống nằm sau sở hữu cách 'employee's'. Do đó ta cần một danh từ (noun) để làm tân ngữ cho giới từ 'by'.",
+              "options": {
+                "A": "dedicate",
+                "B": "dedicated",
+                "C": "dedication",
+                "D": "dedicates"
+              },
+              "answer": "C",
+              "explanation": "Sau sở hữu cách phải là danh từ. 'dedication' là danh từ (sự cống hiến), các đáp án khác là động từ hoặc tính từ."
+            },
+            {
+              "id": 4,
+              "type": "multiple_choice",
+              "prompt": "Xác định từ loại cần điền vào chỗ trống, sau đó chọn đáp án đúng.",
+              "question_text": "The new software seems very ______ to use.",
+              "step_1_pos": "Chỗ trống nằm sau động từ liên kết 'seems' và trạng từ 'very'. Ta cần một tính từ (adjective) để mô tả chủ ngữ 'software'.",
+              "options": {
+                "A": "complication",
+                "B": "complicate",
+                "C": "complicated",
+                "D": "complicates"
+              },
+              "answer": "C",
+              "explanation": "'seem' là linking verb, theo sau là tính từ. 'complicated' (phức tạp) đóng vai trò là tính từ mô tả sự vật."
+            },
+            {
+              "id": 5,
+              "type": "multiple_choice",
+              "prompt": "Xác định từ loại cần điền vào chỗ trống, sau đó chọn đáp án đúng.",
+              "question_text": "All applicants must ______ their resumes by Friday.",
+              "step_1_pos": "Chỗ trống nằm sau động từ khuyết thiếu 'must' và trước tân ngữ 'their resumes'. Ta cần một động từ nguyên thể (bare verb).",
+              "options": {
+                "A": "submit",
+                "B": "submits",
+                "C": "submitted",
+                "D": "submission"
+              },
+              "answer": "A",
+              "explanation": "Sau modal verb 'must' luôn là động từ nguyên thể không 'to'. 'submit' là đáp án đúng duy nhất."
             }
           ]
         }
